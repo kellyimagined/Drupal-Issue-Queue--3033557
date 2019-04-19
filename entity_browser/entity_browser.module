@@ -19,7 +19,7 @@ function entity_browser_help($route_name, RouteMatchInterface $arg) {
     case 'help.page.entity_browser':
       $output = '';
       $output .= '<h3>' . t('About') . '</h3>';
-      $output .= '<p>' . t('The Entity Browser module provides a generic entity browser/picker/selector. It can be used in any context where one needs to select a few entities and do something with them. For more information, see the online documentation for <a href=":entity_browser-documentation">Entity Browser</a>.', [':entity_browser-documentation' => 'https://drupal-media.gitbooks.io/drupal8-guide/content/modules/entity_browser/intro.html']) . '</p>';
+      $output .= '<p>' . t('The Entity Browser module provides a generic entity browser/picker/selector. It can be used in any context where one needs to select a few entities and do something with them. For more information, see the online documentation for <a href=":entity_browser-documentation">Entity Browser</a>.', [':entity_browser-documentation' => 'https://www.drupal.org/docs/8/modules/entity-browser/entity-browser']) . '</p>';
       $output .= '<h3>' . t('Uses') . '</h3>';
       $output .= '<dl>';
       $output .= '<dt>' . t('General') . '</dt>';
