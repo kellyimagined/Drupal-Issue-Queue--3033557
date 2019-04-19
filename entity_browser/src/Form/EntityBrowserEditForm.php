@@ -110,7 +110,6 @@ class EntityBrowserEditForm extends EntityForm {
     if ($entity_browser->isNew()) {
       $help_text = '<div class="clearfix eb-help-text"><h2>' . $this->t('Entity Browser creation instructions') . '</h2>';
       $help_text .= '<p>' . $this->t('When you save this form, you will be taken to another form to configure widgets for the entiry browser.') . '</p>';
-      $help_text .= '<p>' . $this->t('You can find more detailed information about creating and configuring Entity Browsers at the official documentation.') . '</p>';
       $help_text .= '</div>';
       $form['help_text'] = [
         '#markup' => $help_text,
