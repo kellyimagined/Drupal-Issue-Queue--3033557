@@ -557,13 +557,16 @@ class EntityReferenceBrowserWidget extends WidgetBase implements ContainerFactor
    *   The render array for the current selection.
    */
   protected function displayCurrentSelection($details_id, array $field_parents, array $entities) {
-
+    $target_entity_type = $this->fieldDefinition->getFieldStorageDefinition()->getSetting('target_type');
     $field_widget_display = $this->fieldDisplayManager->createInstance(
       $this->getSetting('field_widget_display'),
-      $this->getSetting('field_widget_display_settings') + ['entity_type' => $this->fieldDefinition->getFieldStorageDefinition()->getSetting('target_type')]
+      $this->getSetting('field_widget_display_settings') + ['entity_type' => $target_entity_type]
     );
 
-    $classes = ['entities-list'];
+    $classes = [
+      'entities-list',
+      Html::cleanCssIdentifier("entity-type--$target_entity_type"),
+    ];
     if ($this->fieldDefinition->getFieldStorageDefinition()->getCardinality() != 1) {
       $classes[] = 'sortable';
     }
